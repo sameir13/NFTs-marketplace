@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: #2b2b2b;
+}
+
+
+
+
+@font-face {
+  font-family: San-r;
+  src: url(../assets/static/WorkSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: San-l;
+  src: url(../assets/static/WorkSans-Light.ttf);
+}
+
+@font-face {
+  font-family: San-b;
+  src: url(../assets/static/WorkSans-Bold.ttf);
+}
+
+* {
+  font-family: San-r, sans-serif;
+}
+
+@layer components {
+  .stanWidth {
+    @apply max-w-[1200px] mx-auto px-4 py-[110px] ;
+  }
+  h2,
+  h1 {
+    @apply font-[San-r] text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[70px] mb-4;
+    line-height: 1.2 !important;
+  }
+  h3 {
+    @apply font-[San-r] text-sm   text-white mb-4;
+  }
+
+  .desc {
+    @apply font-[San-l] text-sm lg:text-[16px]  text-white mb-7;
+    line-height: 1.5 !important;
+  }
+  .links {
+    @apply font-[San-l] text-sm lg:text-[16px] tracking-wide  text-white/50;
+    line-height: 1.5 !important;
+  }
+}
+
+
+.space-mono{
+  font-family: monospace;
+}
+
