@@ -4,7 +4,7 @@ import HeaderText from "./HeaderText";
 
 const Trending = () => {
   return (
-    <div className=" stanWidth border">
+    <div className=" stanWidth">
       <HeaderText
         heading={"Trending Collection"}
         detail={"Checkout our weekly updated trending collection."}
