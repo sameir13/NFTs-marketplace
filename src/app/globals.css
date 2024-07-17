@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+body {
   background-color: #2b2b2b;
 }
-
-
-
 
 @font-face {
   font-family: San-r;
@@ -30,8 +26,11 @@ body{
 }
 
 @layer components {
+  .navBottom {
+    @apply max-w-[1150px] mx-auto px-4 py-[30px];
+  }
   .stanWidth {
-    @apply max-w-[1150px] mx-auto px-4 py-[110px] ;
+    @apply max-w-[1150px] mx-auto px-4 py-[110px];
   }
   h2,
   h1 {
@@ -52,14 +51,11 @@ body{
   }
 }
 
-
-.space-mono{
+.space-mono {
   font-family: monospace;
 }
 
-
-
-/* .navlinks{
-  position: relative;
+.bgrad {
+  background: rgb(161,91,249);
+  background: linear-gradient(0deg, rgba(161,91,249,0.6979166666666667) 0%, rgba(161,91,249,0.5634628851540616) 35%, rgba(0,212,255,0) 100%);
 }
- */

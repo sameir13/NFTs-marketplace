@@ -41,25 +41,26 @@ const Navbar = () => {
               IsMobileNav ? "left-0" : "-left-full"
             }  top-0 h-screen justify-center bg-[#3b3b3b]  py-7 px-4 w-full md:hidden text-lg text-white`}
           >
+           
+
             {IsMobileNav && (
               <svg
-                
-                xmlns="http://www.w3.org/2000/svg"
-                width="35"
-                height="35"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
+              
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
                 stroke-linejoin="round"
                 className=" absolute top-8 right-8 border rounded-full cursor-pointer lucide lucide-chevron-left"
                 onClick={()=>setIsMobileNav(false)}
-              >
+                >
                 <path d="m15 18-6-6 6-6" />
               </svg>
             )}
-
 
             <Link className=" hover:bg-[#2b2b2b] px-8 py-1 rounded-xl" href={"/"}>Marketplace</Link>
             <Link className=" hover:bg-[#2b2b2b] px-8 py-1 rounded-xl" href={"/"}>Rankings</Link>

@@ -37,7 +37,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="    grid grid-cols-1 md:grid-cols-2 gap-10 stanWidth items-center  justify-items-center md:justify-items-start  ">
+      <div className="    grid grid-cols-1 md:grid-cols-2 gap-10 navBottom items-center  justify-items-center md:justify-items-start  ">
         {/* section one */}
         <div className="max-w-full  md:max-w-[90%]">
           <h1 className="font-semibold">Discover digital art & Collect NFTs</h1>
