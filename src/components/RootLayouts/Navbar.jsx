@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Button1 from "../Buttons/Button1";
 import { useState } from "react";
@@ -7,10 +7,21 @@ import { useState } from "react";
 const Navbar = () => {
   const [IsMobileNav, setIsMobileNav] = useState(false);
 
-  console.log(IsMobileNav);
+
+  useEffect(()=> {
+
+    if(IsMobileNav){
+      window.document.body.style.overflow = "hidden"
+    }else{
+      window.document.body.style.overflow = "visible"
+    }
+
+
+  },[IsMobileNav])
+
 
   return (
-    <div className="relative z-[9999999999999999999999] border">
+    <div className="relative">
       <nav className="flex items-center justify-between px-4 md:px-10 py-8  ">
         <div>
           <img src="./nav/logo.png" alt="" />
@@ -26,13 +37,33 @@ const Navbar = () => {
 
           {/* mobile navigation bar */}
           <div
-            className={`flex items-center flex-col gap-10 absolute transition-all duration-500  border ${
-              IsMobileNav ? "top-full" : " top-[-230%]"
-            } bg-[#3b3b3b] left-0 py-7 px-4 w-full md:hidden text-lg text-white`}
+            className={`flex items-center flex-col gap-10 absolute transition-all duration-500  ${
+              IsMobileNav ? "left-0" : "-left-full"
+            }  top-0 h-screen justify-center bg-[#3b3b3b]  py-7 px-4 w-full md:hidden text-lg text-white`}
           >
-            <Link href={"/"}>Marketplace</Link>
-            <Link href={"/"}>Rankings</Link>
-            <Link href={"/"}>Connect a wallet</Link>
+            {IsMobileNav && (
+              <svg
+                
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className=" absolute top-8 right-8 border rounded-full cursor-pointer lucide lucide-chevron-left"
+                onClick={()=>setIsMobileNav(false)}
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            )}
+
+
+            <Link className=" hover:bg-[#2b2b2b] px-8 py-1 rounded-xl" href={"/"}>Marketplace</Link>
+            <Link className=" hover:bg-[#2b2b2b] px-8 py-1 rounded-xl" href={"/"}>Rankings</Link>
+            <Link className=" hover:bg-[#2b2b2b] px-8 py-1 rounded-xl" href={"/"}>Connect a wallet</Link>
           </div>
 
           <div className="hidden md:block">
